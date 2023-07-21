@@ -461,4 +461,13 @@ nav .fa-solid {
     .copyright {
         font-size: 14px;
     }
+    
+    .layer {
+
+        padding: 0;
+        text-align: center;
+        font-size: 13px;
+
+    }
+
 }
