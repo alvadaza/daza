@@ -1,3 +1,5 @@
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -165,13 +167,15 @@
                 <div class="contact-rigth">
                     <form method="post">
                         <input type="text" name="name" placeholder="Tu nombre" required/>
-                        <input type="email" name="email" placeholder="Tu correo electrónico" required/>
-                        <textarea name="Massage" rows="6" placeholder="Tu mensaje"></textarea>
+                        <input type="email" name="email placeholder="Tu numero telefonico " required/>
+                        <textarea name="Massage" rows="6" placeholder="Tu correo electronico"></textarea>
                         <button type="submit" class="btn btn2">Enviar</button>
                     </form>
-                    <?php
-                    include("correo.php");
-                    ?>
+                
+                    <?php include("correo.php"); ?>
+                    
+             
+                    
                 </div>
             </div>
         </div>

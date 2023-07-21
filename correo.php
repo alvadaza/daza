@@ -3,7 +3,7 @@
     $destinatario = 'alvarodaza48@gmail.com';
     $nombre = $_POST['name'];
     $email = $_POST['email'];
-    $mensaje = $_POST['Massage'];
+    $mensaje = $_POST['Massage']; 
 
     $header = "Enviado desde la pájina wed";
     $mensajeCompleto = $mensaje . "\nAtentamente: " . $nombre;
