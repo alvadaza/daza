@@ -156,10 +156,12 @@
                     <a href="https://1drv.ms/b/s!Arn-Q_lDmI4wj7NHeC2UaA8tO8ssaA?e=937ovG" target="_blank" rel="noopener" download class="btn btn2">Descargar currículum</a>
                 </div>
                 <div class="contact-rigth">
-                    <form action="correo.php" method="post">
-                        <input type="text" name="name" placeholder="Tu nombre" required/>
-                        <input type="email" name="email" placeholder="Tu correo electronico" required/>
-                        <textarea name="Massage" rows="6" placeholder="Tu mensaje"></textarea>
+                    <!--<form action="correo.php" method="post">-->
+                    <form id="contactForm">    
+                        <input type="text" id="name" placeholder="Tu nombre" required/>
+                        <input type="email" id="email" placeholder="Tu correo electronico" required/>
+                        <input type="tel" id="phone" placeholder="Tu Telefono" required/>
+                        <textarea id="message" rows="6" placeholder="Tu mensaje"></textarea>
                         <button type="submit" class="btn btn2">Enviar</button>
                     </form>
                 </div>
@@ -170,6 +172,7 @@
         </div>
     </section>
 </body>
+<script src="/script.js"></script>
 <script>
     var tablinks = document.getElementsByClassName("tab-links");
     var tabcontents = document.getElementsByClassName("tab-contents");
