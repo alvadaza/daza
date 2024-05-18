@@ -352,6 +352,22 @@ nav ul li a:hover::after {
     width: 100%;
 }
 
+.whatsapp-icon {
+    position: fixed;
+    left: 40px;
+    bottom: 20px;
+    text-decoration: none;
+    font-size: 40px;
+    margin-right: 15px;
+    color: #ababab;
+    display: inline-block;
+    transition: transform 0.5s;
+}
+
+.whatsapp-icon:hover {
+    color: #e31b59;
+    transform: translateY(-5px);
+}
 form input,
 form textarea {
     width: 100%;
@@ -372,6 +388,8 @@ form .btn2 {
     cursor: pointer;
     background-color: #141212;
 }
+
+
 
 .copyringht {
     width: 100%;
@@ -475,6 +493,12 @@ nav .fa-solid {
         text-align: center;
         font-size: 13px;
 
+    }
+    .whatsapp-icon {
+        left: 10px;
+        bottom: 20px;
+        font-size: 40px;
+        
     }
 
 }

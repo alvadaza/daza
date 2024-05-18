@@ -1,3 +1,11 @@
+document.getElementById("whatsappIcon").addEventListener("click", function () {
+  const predefinedMessage = "Me gustaría saber más sobre sus servicios.";
+  const whatsappURL = `https://wa.me/3133574711?text=${encodeURIComponent(
+    predefinedMessage
+  )}`;
+  window.open(whatsappURL, "_blank");
+});
+
 document.getElementById("contactForm").addEventListener("submit", function (e) {
   e.preventDefault();
 
@@ -22,7 +30,7 @@ document.getElementById("contactForm").addEventListener("submit", function (e) {
   )
     .then((response) => response.text())
     .then((data) => {
-      alert("Mensaje enviado con éxito");
+      alert("Mensaje enviado con éxito pronto nos contactaremos contigo");
       document.getElementById("contactForm").reset();
     })
     .catch((error) => {
