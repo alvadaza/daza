@@ -120,10 +120,13 @@ nav ul li a:hover::after {
 .abaut-col-1 img {
     width: 100%;
     height: auto;
+    margin: auto;
 }
 
 .abaut-col-2 {
     flex-basis: 60%;
+    margin: auto;
+
 }
 
 .sub-title {
@@ -164,7 +167,7 @@ nav ul li a:hover::after {
     transition: 0.5s;
 }
 
-.tab-links .active-link::after {
+.active-link::after {
     width: 50%;
 }
 
@@ -180,10 +183,13 @@ nav ul li a:hover::after {
 
 .tab-contents {
     display: none;
+    font-size: 16px;
+    transition: font-size 0.3s ease-in-out;
 }
 
 .active-tab {
     display: block;
+    font-size: 18px;
 }
 
 #services {
