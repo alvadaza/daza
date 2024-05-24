@@ -1,7 +1,7 @@
 * {
     margin: 0;
     padding: 0;
-    font-family: "poppins", sans-serif;
+    font-family: "Poppins", sans-serif;
     box-sizing: border-box;
 }
 
@@ -16,7 +16,7 @@ body {
 
 #header {
     width: 100%;
-    height: 100vh;
+    min-height: 100vh; /* Usar min-height en lugar de height */
     background-image: url(https://res.cloudinary.com/dl7kjajkv/image/upload/v1689885429/image/alvaro4_zjbtnr.png);
     background-size: cover;
     background-position: center;
@@ -24,7 +24,6 @@ body {
 
 .container {
     padding: 10px 10%;
-   
 }
 
 nav {
@@ -33,12 +32,25 @@ nav {
     align-items: center;
     justify-content: space-between;
     flex-wrap: wrap;
+  
+}
+
+#navbar {
+    transition: top 0.3s; /* Agrega una transición suave para la propiedad 'top' */
     position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000; /* Asegura que la barra de navegación esté encima de otros elementos */
+}
+
+.navbar-hidden {
+    top: -100px; /* Mueve la barra de navegación fuera de la pantalla */
 }
 
 
 .logo {
     width: 140px;
+    margin-top: 10px;
 }
 
 nav ul li {
@@ -48,11 +60,10 @@ nav ul li {
 }
 
 nav ul li a {
-    color:#fff;
+    color: #fff;
     text-decoration: none;
     font-size: 18px;
     position: relative;
-   
 }
 
 nav ul li a::after {
@@ -73,25 +84,23 @@ nav ul li a:hover::after {
 .header-text {
     margin-top: 20%;
     font-size: 30px;
-
 }
-
 
 .header-text h1 {
     font-size: 60px;
     margin-top: 30px;
-   
 }
 
 .header-text h1 span {
     color: #e31b59;
 }
 
-
-/*ABAUT*/
+/* About */
 #abaut {
-    padding: 50px 0;
+    padding: 10px 0;
     color: #ababab;
+    max-width: 100%; /* Limita el ancho del contenedor al 100% */
+    overflow: hidden; /* Oculta el contenido que se desborda */
 }
 
 .row {
@@ -102,13 +111,15 @@ nav ul li a:hover::after {
 
 .abaut-col-1 {
     flex-basis: 35%;
+    display: flex;
+    justify-content: center; /* Centrar horizontalmente */
+    align-items: center;
+    min-height: 100vh; /* Usar min-height en lugar de height */
 }
 
 .abaut-col-1 img {
-    width: 85%;
-    height: 80%;
-    border-radius: 15px;
-    margin-top: 15px;
+    width: 100%;
+    height: auto;
 }
 
 .abaut-col-2 {
@@ -136,8 +147,6 @@ nav ul li a:hover::after {
     font-weight: 500;
     cursor: pointer;
     position: relative;
-    
-    
 }
 
 .tab-links:hover {
@@ -166,7 +175,7 @@ nav ul li a:hover::after {
 
 .tab-contents ul li span {
     color: #eb4c7e;
-    font-size: 14px;
+    font-size: 20px;
 }
 
 .tab-contents {
@@ -194,7 +203,7 @@ nav ul li a:hover::after {
     font-size: 13px;
     font-weight: 300;
     border-right: 10px;
-    transition: background 0.3s, transfor 0.5s;
+    transition: background 0.3s, transform 0.5s;
 }
 
 .services-list div i {
@@ -204,7 +213,7 @@ nav ul li a:hover::after {
 
 .services-list div h2 {
     font-size: 30px;
-    font-weight:500;
+    font-weight: 500;
     margin-bottom: 15px;
 }
 
@@ -248,7 +257,7 @@ nav ul li a:hover::after {
 
 .layer {
     width: 100%;
-    height: 0%;
+    height: 0;
     background: linear-gradient(rgba(0,0,0,0.6), #e31b59);
     border-radius: 10px;
     position: absolute;
@@ -310,7 +319,7 @@ nav ul li a:hover::after {
     flex-basis: 35%;
 }
 
-.contact-rigth {
+.contact-right {
     flex-basis: 60%;
 }
 
@@ -321,7 +330,7 @@ nav ul li a:hover::after {
 .contact-left p i {
     color: #e31b59;
     margin-right: 15px;
-    font-size: 25px
+    font-size: 25px;
 }
 
 .social-icons {
@@ -342,13 +351,7 @@ nav ul li a:hover::after {
     transform: translateY(-5px);
 }
 
-.btn .btn2 {
-    display: inline-block;
-    background: #e31b59;
-    
-}
-
-.contact-rigth form {
+.contact-right form {
     width: 100%;
 }
 
@@ -368,6 +371,7 @@ nav ul li a:hover::after {
     color: #e31b59;
     transform: translateY(-5px);
 }
+
 form input,
 form textarea {
     width: 100%;
@@ -389,8 +393,6 @@ form .btn2 {
     background-color: #141212;
 }
 
-
-
 .copyringht {
     width: 100%;
     text-align: center;
@@ -404,40 +406,61 @@ form .btn2 {
     color: #e31b59;
 }
 
-/*HP*/
-
+/* Responsivo */
 nav .fa-solid {
     display: none;
 }
 
 @media only screen and (max-width: 680px) {
     #header {
-        background-image: url(https://res.cloudinary.com/dl7kjajkv/image/upload/v1689885429/image/alvaro_sklhbm.png);
+        background-image: url(https://res.cloudinary.com/dl7kjajkv/image/upload/v1715906151/perfil2_kaiij7.png);
         background-size: cover;
         background-position: center;
         background-attachment: fixed;
         background-repeat: no-repeat;
     }
+    
     .header-text {
         margin-top: 100%;
         font-size: 16px;
     }
+    
     .row {
         display: flex;
         flex-direction: column;
     }
+    .abaut-col-1,
+    .abaut-col-2 {
+    max-width: 100%; /* Limita el ancho máximo del contenido al 100% */
+    padding: 0; /* Agrega un espacio de relleno para evitar que el contenido esté demasiado cerca de los bordes */
+    box-sizing: border-box; /* Incluye el relleno en el ancho total del elemento */
+    }
+
+    .abaut-col-2 {
+    margin-top: 20px; /* Agrega un margen superior para separar las columnas */
+    }
     .header-text h1 {
         font-size: 30px;
     }
+    .tab-links {
+        font-weight: 200;
+    
+    }
+    
+    
     nav {
         justify-content: space-around;
     }
+    
     nav .fa-solid {
         display: block;
         font-size: 25px;
     }
+    
     .logo {
         width: 70px;
+        margin-right: 120px;
+        margin-top: 10px;
     }
     
     nav ul {
@@ -456,49 +479,75 @@ nav .fa-solid {
         display: block;
         margin: 25px;
     }
+
     nav ul .fa-solid {
         position: absolute;
         top: 25px;
         left: 25px;
         cursor: pointer;
     }
+
     .sub-title {
         font-size: 40px;
     }
-    .about-col-1,
-    .about-col-2 {
+
+    .abaut-col-1,
+    .abaut-col-2 {
         flex-basis: 100%;
     }
-    .about-col-1 {
+
+    .abaut-col-1 {
         margin-bottom: 30px;
     }
-    .about-col-2 {
+
+    .abaut-col-2 {
         font-size: 14px;
     }
+
     .tab-links {
         font-size: 16px;
         margin-right: 20px;
     }
+
     .contact-left,
     .contact-right {
         flex-basis: 100%;
     }
-    .copyright {
+
+    .copyringht {
         font-size: 14px;
     }
-    
-    .layer {
 
+    .layer {
         padding: 0;
         text-align: center;
         font-size: 13px;
-
     }
+
     .whatsapp-icon {
         left: 10px;
         bottom: 20px;
         font-size: 40px;
-        
     }
+}
+/* Ajustes para dispositivos en orientación vertical */
+@media only screen and (max-width: 680px) and (orientation: portrait) {
+    .abaut-col-1 img {
+        width: 100%; /* Ajusta el ancho al 100% del contenedor */
+        height: auto; /* Mantiene la proporción de la imagen */
+    }
+    #header {
+        background-position-y: center; /* Centra la imagen verticalmente */
+    }
+}
 
+/* Ajustes para dispositivos en orientación horizontal */
+@media only screen and (max-width: 680px) and (orientation: landscape) {
+    .abaut-col-1 img {
+        max-width: 100%; /* Limita el ancho al 100% del contenedor */
+        max-height: 80vh; /* Limita la altura para evitar que sea demasiado grande */
+    }
+    #header {
+        background-position-y: top; /* Ajusta la imagen hacia arriba */
+    }
 }
