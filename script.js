@@ -76,3 +76,38 @@ function openmenu() {
 function closemenu() {
   sidemeu.style.right = "-200px";
 }
+
+/*para mostrar el portafolio*/
+
+document.addEventListener("DOMContentLoaded", () => {
+  const workElements = document.querySelectorAll(".work");
+
+  const observerOptions = {
+    root: null, // Use the viewport as the root
+    rootMargin: "0px",
+    threshold: 0.1, // Trigger when 10% of the element is visible
+  };
+
+  const observerCallback = (entries, observer) => {
+    entries.forEach((entry) => {
+      const layerElement = entry.target.querySelector(".layer");
+      const imgElement = entry.target.querySelector("img");
+
+      if (entry.isIntersecting) {
+        setTimeout(() => {
+          layerElement.classList.add("active");
+          imgElement.classList.add("active");
+        }, 2000); // 2 seconds delay
+      } else {
+        layerElement.classList.remove("active");
+        imgElement.classList.remove("active");
+      }
+    });
+  };
+
+  const observer = new IntersectionObserver(observerCallback, observerOptions);
+
+  workElements.forEach((workElement) => {
+    observer.observe(workElement);
+  });
+});
