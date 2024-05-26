@@ -237,72 +237,7 @@ nav ul li a:hover::after {
 #portafolio {
     padding: 50px 0;
 }
-/*
-.work-list {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    grid-gap: 40px;
-    margin-top: 50px;
-}
 
-.work {
-    border-radius: 10px;
-    position: relative;
-    overflow: hidden;
-}
-
-.work img {
-    width: 100%;
-    object-fit: cover;
-    border-radius: 10px;
-    display: block;
-    transition: transform 0.5s;
-}
-
-.layer {
-    width: 100%;
-    height: 0;
-    background: linear-gradient(rgba(0,0,0,0.6), #e31b59);
-    border-radius: 10px;
-    position: absolute;
-    left: 0;
-    bottom: 0;
-    overflow: hidden;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    padding: 0 40px;
-    text-align: center;
-    font-size: 14px;
-    transition: height 0.5s;
-}
-
-.layer h3 {
-    font-weight: 500;
-    margin-bottom: 20px;
-}
-
-.layer a {
-    margin-top: 20px;
-    color: #e31b59;
-    text-decoration: none;
-    font-size: 18px;
-    line-height: 60px;
-    background: #fff;
-    width: 60px;
-    border-radius: 50%;
-    text-align: center;
-}
-
-.work:hover img {
-    transform: scale(1.1);
-}
-
-.work:hover .layer {
-    height: 100%;
-}
-*/
 .work-list {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -597,6 +532,7 @@ nav .fa-solid {
         bottom: 20px;
         font-size: 40px;
     }
+
 }
 /* Ajustes para dispositivos en orientación vertical */
 @media only screen and (max-width: 680px) and (orientation: portrait) {
@@ -607,11 +543,13 @@ nav .fa-solid {
     #header {
         background-position-y: center; /* Centra la imagen verticalmente */
     }
+   
 }
 
 /* Ajustes para dispositivos en orientación horizontal */
 @media only screen and (max-width: 680px) and (orientation: landscape) {
     
+  
     .abaut-col-1 img {
         max-width: 100%; /* Limita el ancho al 100% del contenedor */
         max-height: 80vh; /* Limita la altura para evitar que sea demasiado grande */
@@ -621,10 +559,6 @@ nav .fa-solid {
     }
 }
 @media only screen and (min-width: 680px) and (orientation: landscape) {
-    .header-text {
-        margin-top: 8%;
-        font-size: 15px;
-    }
     .abaut-col-1 {
         margin-left: auto;
         margin-right: auto;
